@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <!-- Vereiste meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="meme app met leuke memes.">
+    <meta name="msapplication-TileColor" content="#55b4da">
+    <meta name="theme-color" content="#55b4da">
+    <link rel="icon" type="image/png" size="32x32" href="assets/img/icon/favicon-32x32.png">
+    <title>Home</title>
+
+    <!-- Material.io bestanden (CSS & Font/icons)-->
+    <!-- Uitleg werking componenents: https://material.io/components?platform=web -->
+    <!-- Demo van components:         https://material-components.github.io/material-components-web-catalog/#/ -->
+    <!-- Demo en uitleg icons:        https://fonts.google.com/icons?selected=Material+Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+    <style>body{margin: 0;}</style>
+    
+    <!-- Material.io bestanden (JS en registratie componenten) -->
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script>const MDCBanner = mdc.banner.MDCBanner;const MDCCheckbox = mdc.checkbox.MDCCheckbox;const MDCChip = mdc.chips.MDCChip;const MDCChipSet = mdc.chips.MDCChipSet;const MDCCircularProgress = mdc.circularProgress.MDCCircularProgress;const MDCDataTable = mdc.dataTable.MDCDataTable;const MDCDialog = mdc.dialog.MDCDialog;const MDCDrawer = mdc.drawer.MDCDrawer;const MDCFloatingLabel = mdc.floatingLabel.MDCFloatingLabel;const MDCFormField = mdc.formField.MDCFormField;const MDCIconButtonToggle = mdc.iconButton.MDCIconButtonToggle;const MDCLineRipple = mdc.lineRipple.MDCLineRipple;const MDCLinearProgress = mdc.linearProgress.MDCLinearProgress;const MDCList = mdc.list.MDCList;const MDCMenu = mdc.menu.MDCMenu;const MDCMenuSurface = mdc.menuSurface.MDCMenuSurface;const MDCNotchedOutline = mdc.notchedOutline.MDCNotchedOutline;const MDCRadio = mdc.radio.MDCRadio;const MDCRipple = mdc.ripple.MDCRipple;const MDCSegmentedButton = mdc.segmentedButton.MDCSegmentedButton;const MDCSelect = mdc.select.MDCSelect;const MDCSlider = mdc.slider.MDCSlider;const MDCSnackbar = mdc.snackbar.MDCSnackbar;const MDCSwitch = mdc.switchControl.MDCSwitch;const MDCTabBar = mdc.tabBar.MDCTabBar;const MDCTextField = mdc.textField.MDCTextField;const MDCTooltip = mdc.tooltip.MDCTooltip;const MDCTopAppBar = mdc.topAppBar.MDCTopAppBar;</script>
+
+</head>
+
+<body>
+    <aside class="mdc-drawer mdc-drawer--modal">
+        <div class="mdc-drawer__content">
+            <img class="logo" src="images/logo.png" alt="logo">
+            <P class="logotitel">Old School runescape api APP</P>
+            <nav class="mdc-list">
+              <a class="mdc-list-item" href="MaterialDesignTemplate.html">
+                <span class="mdc-list-item__ripple"></span>
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+                <span class="mdc-list-item__text">items</span>
+              </a>
+              <a class="mdc-list-item" href="MaterialDesignhistory.html">
+                <span class="mdc-list-item__ripple"></span>
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+                <span class="mdc-list-item__text">history</span>
+              </a>
+              <a class="mdc-list-item" href="MaterialDesignBoslist.html">
+                <span class="mdc-list-item__ripple"></span>
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+                <span class="mdc-list-item__text">boss lists</span>
+              </a>
+            </nav>
+        </div>
+      </aside>
+      <div class="mdc-drawer-scrim"></div>
+ <!-- HTML web-elementen -->   
+
+ <header class="mdc-top-app-bar">
+    <div class="mdc-top-app-bar__row">
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+        <button onclick="" class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Open navigation menu">menu</button>
+        <h3 class="home" onclick="showAll()">Home</h3>
+      </section>
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+        <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Search">search</button>
+
+      </section>
+    </div>
+  </header>
+  <main class="mdc-top-app-bar--fixed-adjust">
+    <div class="mdc-tab-bar" role="tablist">
+      <div class="mdc-tab-scroller">
+        <div class="mdc-tab-scroller__scroll-area">
+         
+        </div>
+      </div>
+    </div>
+    <div>
+      <ul id="itemContainerboslist" class="mdc-image-list mdc-image-list--masonry my-masonry-image-list">
+        <li class="mdc-image-list__item">
+          <h3>Cerberus</h3>
+          <img class="mdc-image-list__image" src="images/cerberus.jpg" alt="cerberus">
+          <div class="mdc-image-list__supporting">
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <h3>General gaardoor</h3>
+          <img class="mdc-image-list__image" src="images/general gaardor.jpg" alt="gerneral gaardor"> 
+          <div class="mdc-image-list__supporting">
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <h3>Kraken</h3>
+          <img class="mdc-image-list__image" src="images/kraken.jpg" alt="kraken">
+          <div class="mdc-image-list__supporting">
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <h3>Mole</h3>
+          <img class="mdc-image-list__image" src="images/mole.jpg" alt="mole">
+          <div class="mdc-image-list__supporting">
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <h3>corporeal beast</h3>
+          <img class="mdc-image-list__image" src="images/dragonwarhammerspec.jpg" alt="corporeal beast">
+          <div class="mdc-image-list__supporting">
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <h3>Vorkath</h3>
+          <img class="mdc-image-list__image" src="images/vorkath.jpg" alt="vorkath"> 
+          <div class="mdc-image-list__supporting">
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <h3>Kree'arra</h3>
+          <img class="mdc-image-list__image" src="images/kree.jpg" alt="Kree'arra">
+          <div class="mdc-image-list__supporting">
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <h3>K'ril Tsutsaroth</h3>
+          <img class="mdc-image-list__image" src="images/krilsut.jpg" alt="K'ril Tsutsaroth">
+          <div class="mdc-image-list__supporting">
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <h3>nightmare</h3>
+          <img class="mdc-image-list__image" src="images/nightmare.jpg" alt="nightmare">
+          <div class="mdc-image-list__supporting">
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <h3>Vet'ion</h3>
+          <img class="mdc-image-list__image" src="images/skeletonboss.jpg" alt="Vet'ion"> 
+          <div class="mdc-image-list__supporting">
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </main>
+
+  <section class="sheet sheet-out-of-view text-white h-screen z-100">
+   
+     <header class="sheetheader">
+        <span class="material-symbols-outlined material-icons" id="closeBtn" > arrow_back</span>
+        <h2 id="title">Tekst</h2>
+      </header>
+    <main>
+      <img id="detailedImg" src="">
+      <div id="informationdiv">
+      <h3>examine: <h4 id="examine"></h4></h3>
+      <h3 >price: <span id="value"></span></h3>
+      <h3>lowalch: <span id="lowalch"></span></h3>
+      <h3>highalch: <span id="highalch"></span></h3>
+      <h3>members: <span id="members"></span></h3>
+      </div>
+        
+
+    </main>
+    <footer id="sheetfooter">
+      <div class="mdc-tab-bar" role="tablist">
+        <div class="mdc-tab-scroller">
+          <div class="mdc-tab-scrollerscroll-area">
+            <div class="mdc-tab-scrollerscroll-content sectionfooter">
+              <button id="likebutton" class="mdc-tab" role="tab" aria-selected="false" tabindex="0">
+                <span class="mdc-tabcontent aligncenter">
+                  <span id="thumpup" class="material-icons" onclick="likebuttonstate()">thumb_up </span>
+                </span>
+                <span class="mdc-tab-indicator">
+                  <span class="mdc-tab-indicatorcontent mdc-tab-indicatorcontent--underline"></span>
+                </span>
+                <span class="mdc-tabripple"></span>
+              </button>
+            
+                </span>
+                <span class="mdc-tab-indicator">
+                  <span class="mdc-tab-indicatorcontent mdc-tab-indicatorcontent--underline"></span>
+                </span>
+                <span class="mdc-tabripple"></span>
+              </button>
+              <button id="dislikebutton" class="mdc-tab" role="tab" aria-selected="false" tabindex="0">
+                <span class="mdc-tabcontent aligncenter">
+                  <span id="thumpdown" class="material-icons">thumb_down</span>
+                </span>
+                <span class="mdc-tab-indicator">
+                  <span class="mdc-tab-indicatorcontent mdc-tab-indicatorcontent--underline"></span>
+                </span>
+                <span class="mdc-tabripple"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  
+<!-- Vanaf hier custom Javascript-->
+<script src="app.js"></script>
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
